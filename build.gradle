@@ -80,10 +80,7 @@ jib {
     }
 }
 
-jacoco {
-    toolVersion = "0.8.5"
-    reportsDir = file("$buildDir/jacoco")
-}
+
 
 tasks.register('GenerateSampleVulnerability'){
 	group = 'SasanLabs'
@@ -145,6 +142,4 @@ test {
     finalizedBy jacocoTestReport
 }
 
-jacocoTestReport {
-    dependsOn test
-}
+
